@@ -1,8 +1,11 @@
 
+import { useState } from "react"
 import Container from "./styled"
 
 
 export default function Home(){
+
+    const [alimentos, setAlimentos] = useState([])
 
     function mostrar(){
         const r = [
@@ -31,6 +34,8 @@ export default function Home(){
               especificacoes: "Esse produto é de ótima qualidade você não vai se arrepender jamais na sua vidinha!!" 
             }
           ]
+
+          setAlimentos(r)
     }
 
     return(
@@ -38,7 +43,11 @@ export default function Home(){
             <div className="box-principal">
                 <h1> Cardapio </h1>
                 <br />
-                <button> Mostrar </button>
+                <button onClick={alimentos}> Mostrar </button>
+                <div className="lista-produtos"> 
+                    {alimentos.map}
+
+                </div>
             </div>
         </Container>
     )
