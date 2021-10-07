@@ -5,7 +5,7 @@ import Container from "./styled"
 export default function Alimento(){
     return(
         <Container>
-            <img className="foto" src="../assets/images/burgao.svg" alt="" />
+            <img className="foto" src="" alt="" />
             <div className="titulo"> BigJadde </div>
             <div className="preco"> 20.00 </div>
 
