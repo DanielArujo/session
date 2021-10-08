@@ -1,15 +1,20 @@
 
+import { Link } from "react-router-dom"
 import Container from "./styled"
 
 
-export default function Alimento(){
+export default function Alimento(props){
     return(
         <Container>
-            <img className="foto" src="" alt="" />
-            <div className="titulo"> BigJadde </div>
-            <div className="preco"> 20.00 </div>
-
-            <button> Ver detalhes </button>
+            <img className="foto" src={props.info.imagem} alt="" />
+            <div className="titulo"> {props.info.titulo} </div>
+            <div className="preco"> {props.info.preco} </div>
+            <Link to={{
+                pathname:"/detalhe",
+                state: props.info
+            }}>
+              <button> Ver detalhes </button>
+            </ Link>   
         </Container>
     )
 }

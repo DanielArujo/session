@@ -27,6 +27,10 @@ button:hover{
     align-items: center;
 }
 
+.lista-produtos{
+    display: flex;
+    flex-wrap: wrap;
+}
 
 `
 

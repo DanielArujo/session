@@ -1,5 +1,6 @@
 
 import { useState } from "react"
+import Alimento from "../../components/alimento"
 import Container from "./styled"
 
 
@@ -43,9 +44,11 @@ export default function Home(){
             <div className="box-principal">
                 <h1> Cardapio </h1>
                 <br />
-                <button onClick={alimentos}> Mostrar </button>
+                <button onClick={mostrar}> Mostrar </button>
                 <div className="lista-produtos"> 
-                    {alimentos.map}
+                    {alimentos.map( item =>
+                      <Alimento info={item}/>
+                    )}
 
                 </div>
             </div>

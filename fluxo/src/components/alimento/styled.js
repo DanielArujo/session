@@ -7,7 +7,7 @@ const Container = styled.div`
     padding: 2em;
     box-shadow: 0px 0px 5px  1px black;
     align-items: center;
-
+    margin: 2em 3em;
 
 .foto{
     width: 5em;
